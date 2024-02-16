@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-sans-serif: Arial, Helvetica, sans-serif;
+  --font-serif: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h1 {
+  width: 200px;
+  margin: 1rem auto;
+  font-family: var(--font-sans-serif);
+}
