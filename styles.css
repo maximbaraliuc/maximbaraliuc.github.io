@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px dotted red; */
 }
 
 :root {
@@ -68,26 +67,6 @@ nav ul {
   color: var(--clr-secondary);
 }
 
-.hobby-container {
-  margin: auto;
-  color: var(--clr-primary);
-  font-size: medium;
-}
-
-.hobby-article {
-  margin-block: 1rem 2rem;
-  margin-inline: 1rem;
-}
-
-.hobby-article h2 {
-  font-family: var(--font-sans-serif);
-}
-.hobby-article a {
-  font-family: var(--font-sans-serif);
-  font-size: small;
-  font-weight: bold;
-}
-
 .personal-info {
   margin: auto;
   display: flex;
@@ -118,6 +97,21 @@ nav ul {
   margin: 1rem;
 }
 
+.hobby-container {
+  margin: auto;
+  color: var(--clr-primary);
+  font-size: medium;
+}
+
+.hobby-article {
+  margin-block: 1rem 2rem;
+  margin-inline: 1rem;
+}
+
+.hobby-article h2 {
+  font-family: var(--font-sans-serif);
+}
+
 footer {
   margin-top: auto;
   background-color: var(--clr-primary);
@@ -133,7 +127,6 @@ footer a:visited,
 .hobby-article a:link,
 .hobby-article a:visited {
   color: crimson;
-  /* font-weight: bold; */
 }
 
 @media only screen and (min-width: 800px) {
