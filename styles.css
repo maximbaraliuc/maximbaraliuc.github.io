@@ -2,15 +2,159 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px dotted red; */
 }
 
 :root {
   --font-sans-serif: Arial, Helvetica, sans-serif;
   --font-serif: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  --clr-primary: #482a50;
+  --clr-secondary: #eeeeee;
+  --main-width: 800px;
+  --navbar-height: 4rem;
 }
 
-h1 {
-  width: 200px;
-  margin: 1rem auto;
+a:link {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--clr-secondary);
+}
+
+header {
+  background-color: var(--clr-primary);
+  overflow: hidden;
+}
+
+nav ul {
+  height: var(--navbar-height);
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: var(--font-sans-serif);
+}
+
+.nav-item {
+  list-style: none;
+  transition: 0.2s all ease-in-out;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+}
+
+.nav-page-link {
+  margin-right: 2rem;
+  margin-left: auto;
+}
+
+.logo {
+  height: calc(var(--navbar-height) * 0.8);
+}
+
+.github-logo {
+  height: calc(var(--navbar-height) * 0.6);
+}
+
+.page-link {
+  margin-left: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--clr-secondary);
+}
+
+.hobby-container {
+  margin: auto;
+  color: var(--clr-primary);
+  font-size: medium;
+}
+
+.hobby-article {
+  margin-block: 1rem 2rem;
+  margin-inline: 1rem;
+}
+
+.hobby-article h2 {
+  font-family: var(--font-sans-serif);
+}
+.hobby-article a {
+  font-family: var(--font-sans-serif);
+  font-size: small;
+  font-weight: bold;
+}
+
+.personal-info {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-primary);
+  font-size: medium;
+  padding-block: 2rem;
+}
+.profile-images {
+  display: grid;
+  place-items: center;
+  margin-bottom: 3rem;
+}
+
+.profile-images img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-primary);
+}
+
+.personal-info:hover img:first-child {
+  z-index: 1;
+}
+
+.personal-info-text {
+  margin: 1rem;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  text-align: center;
+  padding: 0.5rem;
+  font-family: var(--font-sans-serif);
+  font-size: small;
+}
+
+footer a:link,
+footer a:visited,
+.hobby-article a:link,
+.hobby-article a:visited {
+  color: crimson;
+  /* font-weight: bold; */
+}
+
+@media only screen and (min-width: 800px) {
+  nav ul {
+    width: var(--main-width);
+    margin-inline: auto;
+  }
+  .personal-info {
+    flex-direction: row;
+  }
+
+  .personal-info {
+    width: var(--main-width);
+    padding-block: 5rem;
+  }
+  .hobby-article {
+    width: var(--main-width);
+  }
+
+  .profile-images {
+    margin-right: 3rem;
+    margin-bottom: 0rem;
+  }
 }
